@@ -77,6 +77,7 @@
                 <label for="age" class="col-md-4 col-form-label text-md-right">{{ __('Blood Type') }}</label>
                 <div class="col-md-6">
                     <select name="bloodType" id="bloodType">
+                        <option value='' @if (old('bloodType')==null) selected @endif disabled >اختر</option>
                         <option value="A+" @if (old('bloodType')=='A+') selected @endif >A+</option>
                         <option value="A-" @if (old('bloodType')=='A-') selected @endif>A-</option>
                         <option value="B+" @if (old('bloodType')=='B+') selected @endif>B+</option>
@@ -97,6 +98,7 @@
                 <label for="address" class="col-md-4 col-form-label text-md-right">{{ __('address') }}</label>
                 <div class="col-md-6">
                     <select name="address" id="address">
+                        <option value=""  @if (old('address')==null) selected @endif disabled>اختر</option>
                         <option value="inside" @if (old('address')=='inside') selected @endif>داخل القرية</option>
                         <option value="outside" @if (old('address')=='outside') selected @endif>خارج القرية</option>
                       </select>

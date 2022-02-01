@@ -55,9 +55,9 @@ class DonersController extends Controller
     public function update(Request $request, Doner $doner)
 {
     $request->validate([
-        'firstName' => 'required|alpha',
-        'secondName' => 'required|alpha',
-        'thirdName' => 'required|alpha',
+        'firstName' => 'required',
+        'secondName' => 'required',
+        'thirdName' => 'required',
         'age' => 'required|numeric|gte:16|lte:60',
         'bloodType' => 'required',
         'mobile' => 'required|digits:11',

@@ -80,6 +80,7 @@
                 <label for="age" class="col-md-4 col-form-label text-md-right">{{ __('Blood Type') }}</label>
                 <div class="col-md-6">
                     <select name="bloodType" id="bloodType" value='{{$doner->bloodType}}.selectedIndex'>
+                        <option value='' @if (old('bloodType')==null) selected @endif disabled >اختر</option>
                         <option value="A+" @if ($doner->bloodType=='A+')selected @endif>A+</option>
                         <option value="A-"  @if ($doner->bloodType=='A-')selected @endif>A-</option>
                         <option value="B+"  @if ($doner->bloodType=='B+')selected @endif>B+</option>
@@ -100,6 +101,7 @@
                 <label for="address" class="col-md-4 col-form-label text-md-right">{{ __('address') }}</label>
                 <div class="col-md-6">
                     <select name="address" id="address" value='{{$doner->address}}.selectedIndex'>
+                        <option value="" @if ($doner->address==null)selected @endif disabled>اختر</option>
                         <option value="inside" @if ($doner->address=='inside')selected @endif>داخل القرية</option>
                         <option value="outside" @if ($doner->address=='outside')selected @endif>خارج القرية</option>
                       </select>
